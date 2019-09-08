@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/global.css">
+<style>
+.myfont {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 120%;
+}
+</style>
+</head>
+<body class="bg">
+<!-- STICKY HEADER -->
+    <div class="header" >
+        <div class="Navbar" id="Nav" style="background-color:#666666;">
+            <div class="logo-img-new">
+                <img id="logo-new" src="sislogo.jpeg" width:80px;>
+            </div>
+            <div></div>
+            <div class="Navbar__Link Navbar__Link-toggle">
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+            <div class="Navbar__Items" >
+                    <div class="Navbar__Link">
+                        <a class="a-header" href="login.htm">HOME</a>
+                    </div>
+                    <div class="Navbar__Link">
+                        <a class="a-header" href="about_us.htm">ABOUT US</a>
+                    </div>
+            
+                    <div class="Navbar__Link">
+                        <a class="a-header" href="contact_us.htm">CONTACT US</a>
+                    </div>
+		<div class="Navbar__Link">
+                        <a class="a-header" href="request-status.htm">REQUESTS</a>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- END OF STICKY HEADER -->
+<br>
+<br>
+<br>
+<br>
+<div class="slideshow-container">
+   <div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="capture.jpg" style="width:1340px ; height:300px;">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="stu.jpg" style="width:1340px;height:300px;border: 2px solid DodgerBlue;">
+
+</div>
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="SIS.png" style="width:1340px; height:300px;">
+  
+</div>
+
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<div>
+<div style="padding:10px; width:900px;height:240px;float:left;">
+<h style="font-family:Comic Sans MS;color:#00bfff;font-size:200%;">STUDENT INFORMATION SYSTEM</h>
+<p class="myfont">People often ask what is the need for a school management software, when schools can be managed with existing systems and what is the value added to the learning process. It was Winston Churchill who said,
+</p>
+<p style="font-family:Lobster, Sans-serif;color:#006652;font-size:150%;">“To improve is to change; to be perfect is to change often.”</p>
+</div>
+<video style="border: 2px solid DodgerBlue; border-radius: 5px; width:420px;height:240px;float:left;"controls >
+  <source src="out.mp4" type="video/mp4">
+  <source src="out.ogg" type="video/ogg">
+</video>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 style="font-family:algerian;color:#00bfff"><center>Catered to everyone's need</center></h1>
+<br>
+<br>
+<div>
+<button onclick="openWin()" class="button" style="width:33%"><h2>STUDENTS</h2></button>
+<button onclick="openWin()" class="button"  style="width:33%"><h2>ADMIN</h2></button>
+<button onclick="openWin()" class="button" style="width:33%"><h2>DEPARTMENT</h2></button>
+</div>
+<br>
+<br>
+<script>
+function openWin() {
+    window.open("login_admin.htm","_self");
+}
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+
+</body>
+</html>

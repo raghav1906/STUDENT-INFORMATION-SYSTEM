@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/global.css">
+
+    <!-- FONT AWESOME CSS REFERENCE-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+.bg { 
+    background-image: url("search_back.jpg");
+    height: 100%; 
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+#myInput {
+  background-image: url("/css/searchicon.png");
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+td,a
+{
+text-decoration: none;
+color: #ffcc66;
+}
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body class="bg">
+<!-- STICKY HEADER -->
+    <div class="header">
+        <div class="Navbar" id="Nav">
+            <div class="logo-img-new">
+                <img id="logo-new" src="sislogo.jpeg">
+            </div>
+            <div></div>
+            <div class="Navbar__Link Navbar__Link-toggle">
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+            <div class="Navbar__Items" >
+                    <div class="Navbar__Link">
+                        <a class="a-header" href="admin.htm">HOME</a>
+                    </div>
+                    <div class="Navbar__Link">
+                        <a class="a-header" href="about_us.htm">ABOUT US</a>
+                    </div>
+            
+                    <div class="Navbar__Link">
+                        <a class="a-header" href="contact_us.htm">CONTACT US</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF STICKY HEADER -->
+
+<br>
+<br>
+<img src="studentprofiles.jpg" style="width:1340px ; height:200px;">
+<br>
+<br>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:40%;">Name</th>
+    <th style="width:30%;">Admission Number</th>
+    <th style="width:30%;">Father's Name</th> 
+  </tr>
+  <tr>
+    <td><a href="rahul.htm">Rahul</a></td>
+    <td>U1704</td>
+    <td>Aman Mishra</td>
+  </tr>
+  <tr>
+    <td><a href="#">Kaustav Saha</a></td>
+    <td>U1783</td>
+    <td>Raman Saha</td>
+  </tr>
+  <tr>
+    <td><a href="#">Vanshika Sood</a></td>
+    <td>U1793</td>
+    <td>Sanjeev Sood</td>
+  </tr>
+  <tr>
+    <td><a href="#">Anshul Goyal</a></td>
+    <td>U1933</td>
+    <td>Manoj Goyal</td>
+  </tr>
+  <tr>
+    <td><a href="#">Yash Patel</a></td>
+    <td>U1683</td>
+    <td>Vasant Patel</td>
+  </tr>
+  </table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>
